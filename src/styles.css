@@ -1,0 +1,13 @@
+input:invalid {
+    border: solid 2px red;
+    box-shadow: 2px 2px 2px red;
+}
+
+input:focus:invalid {
+    border: solid 1px black;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+}

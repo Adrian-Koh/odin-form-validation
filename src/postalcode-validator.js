@@ -1,7 +1,7 @@
 function validatePostalCode() {
     const fiveDigitRegex = "^\\d{5}$";
     const fiveDigitMessage = (country) => `${country} postal codes must have exactly 5 digits, e.g. 12345.`;
-    
+
     const constraints = {
         jp: [
             "^\\d{3}-\\d{4}$",
@@ -33,9 +33,11 @@ function validatePostalCode() {
 
         if (regex.test(postalCodeValue)) {
             errorSpan.innerText = '';
+            postalCode.setCustomValidity("");
         }
         else {
             errorSpan.innerText = constraints[selectedCountry][1];
+            postalCode.setCustomValidity(constraints[selectedCountry][1]);
         }
     });
 }
