@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form novalidate>
+        <p>
+            <label for="email">Email: <input type="email" id="email"></label>
+        </p>
+        <p>
+            <label for="country">Country: 
+                <select id="country">
+                    <option value="jp">Japan</option>
+                    <option value="my">Malaysia</option>
+                    <option value="kr">South Korea</option>
+                    <option value="id">Indonesia</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label for="postal-code">Postal code: <input type="text" id="postal-code"></label>
+        </p>
+        <p>
+            <label for="password">Password: <input type="password" id="password"></label>
+        </p>
+        <p>
+            <label for="password-confirm">Confirm password: <input type="password" id="password-confirm"></label>
+        </p>
+        <p>
+            <input type="submit" id="submit">
+        </p>
+    </form>
+    <span class="error" aria-live="polite"></span>
+</body>
+</html>
