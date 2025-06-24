@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <form novalidate>
+      <label for="email"
+        >Email: <input type="email" id="email" required
+      /></label>
+      <label for="country"
+        >Country:
+        <select id="country">
+          <option value="jp">Japan</option>
+          <option value="my">Malaysia</option>
+          <option value="kr">South Korea</option>
+          <option value="id">Indonesia</option>
+        </select>
+      </label>
+      <label for="postal-code"
+        >Postal code: <input type="text" id="postal-code" required
+      /></label>
+      <label for="password"
+        >Password: <input type="password" id="password" required
+      /></label>
+      <label for="password-confirm"
+        >Confirm password:
+        <input type="password" id="password-confirm" required
+      /></label>
+      <input type="submit" id="submit" />
+    </form>
+    <span class="error" id="no-error" aria-live="polite"></span>
+  </body>
+</html>
