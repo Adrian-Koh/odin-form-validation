@@ -1,17 +1,17 @@
 function setErrorMessage(field, errorMessage) {
-    const errorSpan = document.querySelector('.error');
-    errorSpan.id = 'has-error';
+  const errorSpan = document.querySelector(".error");
+  errorSpan.id = "has-error";
 
-    field.setCustomValidity(errorMessage);
-    errorSpan.innerText = errorMessage;
+  field.setCustomValidity(errorMessage);
+  errorSpan.innerText = errorMessage;
 }
 
 function removeErrorMessage(field) {
-    const errorSpan = document.querySelector('.error');
-    errorSpan.id = 'no-error';
+  const errorSpan = document.querySelector(".error");
+  errorSpan.id = "no-error";
 
-    field.setCustomValidity('');
-    errorSpan.innerText = '';
+  field.setCustomValidity("");
+  errorSpan.innerText = "";
 }
 
-export {setErrorMessage, removeErrorMessage};
+export { setErrorMessage, removeErrorMessage };

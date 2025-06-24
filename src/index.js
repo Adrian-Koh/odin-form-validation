@@ -7,6 +7,6 @@ validateEmail();
 validatePostalCode();
 validatePassword();
 
-document.querySelector('#submit').addEventListener('click', (event) => {
-    event.preventDefault();
+document.querySelector("#submit").addEventListener("click", (event) => {
+  event.preventDefault();
 });
