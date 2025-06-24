@@ -1,3 +1,5 @@
+import { removeErrorMessage, setErrorMessage } from "./error-message";
+
 function validatePostalCode() {
     const fiveDigitRegex = "^\\d{5}$";
     const fiveDigitMessage = (country) => `${country} postal codes must have exactly 5 digits, e.g. 12345.`;
@@ -24,20 +26,19 @@ function validatePostalCode() {
 
     const postalCode = document.querySelector('#postal-code');
     const country = document.querySelector('#country');
-    const errorSpan = document.querySelector('.error');
 
     postalCode.addEventListener('input', () => {
+        postalCode.className = 'typed';
+
         const selectedCountry = country.value;
         const postalCodeValue = postalCode.value;
         const regex = new RegExp(constraints[selectedCountry][0]);
 
         if (regex.test(postalCodeValue)) {
-            errorSpan.innerText = '';
-            postalCode.setCustomValidity("");
+            removeErrorMessage(postalCode);
         }
         else {
-            errorSpan.innerText = constraints[selectedCountry][1];
-            postalCode.setCustomValidity(constraints[selectedCountry][1]);
+            setErrorMessage(postalCode, constraints[selectedCountry][1]);
         }
     });
 }

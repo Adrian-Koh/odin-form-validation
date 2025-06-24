@@ -1,16 +1,17 @@
+import { removeErrorMessage, setErrorMessage } from "./error-message";
+
 function validateEmail() {
     const email = document.querySelector('#email');
-    const errorSpan = document.querySelector('.error');
 
     email.addEventListener('input', () => {
+        email.className = 'typed';
+        
         if (email.validity.typeMismatch) {
             const errorMessage = "Please enter a valid email.";
-            errorSpan.innerText = errorMessage;
-            email.setCustomValidity(errorMessage);
+            setErrorMessage(email, errorMessage);
         }
         else {
-            errorSpan.innerText = '';
-            email.setCustomValidity("");
+            removeErrorMessage(email);
         }
     });
 }
